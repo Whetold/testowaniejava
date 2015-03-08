@@ -2,11 +2,13 @@ package lab01;
 
 
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.Assert;
 import org.junit.Before;
 
 public class CalculatorTest { 
 	
+	public ExpectedException except = ExpectedException.none();
 	private Calculator calculator;
 	
 	
@@ -17,27 +19,36 @@ public class CalculatorTest {
 	
 	@Test 
 	public void AddT(){ 
-		Assert.assertEquals(10,calculator.add(5,5)); 
+		Assert.assertEquals(5,calculator.add(4,1)); 
 	} 
 	
 	@Test 
 	public void SubT(){ 
-		Assert.assertEquals(10,calculator.sub(20, 10)); 
+		Assert.assertEquals(18,calculator.sub(20, 2)); 
 	}
 	
 	@Test 
 	public void multiT(){ 
-		Assert.assertEquals(20,calculator.multi(5,4)); 
+		Assert.assertEquals(24,calculator.multi(6,4)); 
 	}
 	
 	@Test 
 	public void divT(){ 
-		Assert.assertEquals(20,calculator.div(100,5)); 
+		Assert.assertEquals(4,calculator.div(20,5)); 
 	} 
 	
 	@Test 
+	public void divTzero(){
+		except.expect(ArithmeticException.class);
+		calculator.div(16,0);
+	}
+	
+	
+	
+	
+	@Test 
 	public void GreaterT(){
-		Assert.assertTrue(calculator.greater(112,23)); 
+		Assert.assertTrue(calculator.greater(12,5)); 
 	} 
 	
 
