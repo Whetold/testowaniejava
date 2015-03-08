@@ -17,27 +17,27 @@ public class CalculatorTest {
 	
 	@Test 
 	public void AddT(){ 
-		Assert.assertEquals(5,calculator.add(4,1)); 
+		Assert.assertEquals(10,calculator.add(5,5)); 
 	} 
 	
 	@Test 
 	public void SubT(){ 
-		Assert.assertEquals(18,calculator.sub(20, 2)); 
+		Assert.assertEquals(10,calculator.sub(20, 10)); 
 	}
 	
 	@Test 
 	public void multiT(){ 
-		Assert.assertEquals(24,calculator.multi(6,4)); 
+		Assert.assertEquals(20,calculator.multi(5,4)); 
 	}
 	
 	@Test 
 	public void divT(){ 
-		Assert.assertEquals(4,calculator.div(20,5)); 
+		Assert.assertEquals(20,calculator.div(100,5)); 
 	} 
 	
 	@Test 
 	public void GreaterT(){
-		Assert.assertTrue(calculator.greater(12,5)); 
+		Assert.assertTrue(calculator.greater(112,23)); 
 	} 
 	
 
