@@ -1,5 +1,5 @@
 package lab01;
-
+//Ex 1
 public interface Calc {
 	   int add(int a, int b);
 	   int sub(int a, int b);
